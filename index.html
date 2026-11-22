@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EduPilot AI — Your learning, understood.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#"><span class="brand-icon">e</span><span><b>edupilot</b><small>YOUR ACADEMIC COMPANION</small></span></a>
+    <div class="nav-label">WORKSPACE</div>
+    <nav class="nav">
+      <button class="nav-item active" data-page="dashboard"><span>⌂</span> Overview</button>
+      <button class="nav-item" data-page="profile"><span>◎</span> Academic profile</button>
+      <button class="nav-item" data-page="syllabus"><span>▤</span> My syllabus</button>
+      <button class="nav-item" data-page="performance"><span>◫</span> Performance</button>
+      <button class="nav-item" data-page="planner"><span>▦</span> Study planner</button>
+      <button class="nav-item" data-page="tutor"><span>✳</span> AI tutor <i>NEW</i></button>
+      <button class="nav-item" data-page="progress"><span>↗</span> My progress</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="side-help"><span class="spark">✦</span><b>Small steps add up.</b><p>Your learning plan adapts as you do.</p></div>
+      <div class="profile-mini"><div class="avatar">S</div><div><b id="side-name">Student</b><small id="side-university">Your university</small></div><button data-page="profile" aria-label="Edit profile">···</button></div>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button class="menu-toggle" id="menu-toggle">☰</button><div class="crumb">Workspace <span>/</span> <b id="crumb-name">Overview</b></div><div class="top-actions"><span class="today" id="today-label"></span><span class="top-avatar">S</span></div></header>
+    <div class="content">
+      <section class="page active" id="page-dashboard">
+        <div class="welcome-row"><div><div class="eyebrow">YOUR LEARNING SPACE</div><h1>Good to see you, <span id="welcome-name">Student</span> <span class="wave">✦</span></h1><p class="subhead">A clearer picture of where you are — and what to do next.</p></div><button class="btn btn-dark" data-page="planner">View my study plan <span>↗</span></button></div>
+        <div class="hero-card"><div class="hero-copy"><div class="eyebrow light">YOUR ACADEMIC SNAPSHOT</div><h2>Progress is built<br>one topic at a time.</h2><p id="hero-caption">Your learning journey starts here. Add your academic details to personalize your space.</p><button class="btn btn-light" data-page="profile">Set up my profile <span>→</span></button></div><div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-orb"><span>✦</span></div><div class="float-note note-one">✧ Keep going</div><div class="float-note note-two">Your pace. Your progress.</div></div></div>
+        <div class="section-head"><div><div class="eyebrow">AT A GLANCE</div><h2>Your overview</h2></div><span class="muted" id="semester-label">Academic snapshot</span></div>
+        <div class="stat-grid">
+          <article class="stat-card"><div class="stat-top"><span>Academic average</span><span class="stat-icon lavender">◒</span></div><strong id="stat-average">—</strong><small>Across your subjects</small><div class="mini-track"><span id="average-bar"></span></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Subjects tracked</span><span class="stat-icon mint">▤</span></div><strong id="stat-subjects">0</strong><small>In your current semester</small><div class="stat-foot" id="subject-foot">Your syllabus subjects</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Need attention</span><span class="stat-icon peach">⌁</span></div><strong id="stat-risk">0</strong><small>Subjects to focus on</small><div class="stat-foot">A guide, not a label</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Tasks completed</span><span class="stat-icon blue">✓</span></div><strong id="stat-tasks">0%</strong><small>Of your study plan</small><div class="mini-track"><span id="task-bar"></span></div></article>
+        </div>
+        <div class="dashboard-grid">
+          <article class="panel"><div class="panel-head"><div><div class="eyebrow">YOUR SUBJECTS</div><h3>Where you stand</h3></div><button class="text-btn" data-page="performance">View details ↗</button></div><div id="subject-overview" class="subject-overview"><div class="empty">Your subject analysis will appear here.</div></div></article>
+          <article class="panel next-panel"><div class="panel-head"><div><div class="eyebrow">UP NEXT</div><h3>Your next steps</h3></div><span class="soft-pill">Personalized</span></div><div id="next-steps" class="next-steps"><div class="empty">Generate a study plan to see your next steps.</div></div><button class="btn btn-outline full" data-page="planner">Open study planner →</button></article>
+        </div>
+        <div class="bottom-grid"><article class="panel"><div class="panel-head"><div><div class="eyebrow">A LITTLE MOMENTUM</div><h3>Learning snapshot</h3></div></div><div id="learning-snapshot" class="snapshot"><div class="empty">Complete a lesson assessment to start tracking topic mastery.</div></div></article><article class="quote-card"><span>✦</span><p>“You don't have to know everything today. You just have to take the next step.”</p><small>YOUR EDUPILOT REMINDER</small></article></div>
+      </section>
+
+      <section class="page" id="page-profile">
+        <div class="page-title"><div class="eyebrow">LET'S MAKE THIS YOURS</div><h1>Academic profile</h1><p class="subhead">Tell us where you're studying. We'll use this to find the right curriculum.</p></div>
+        <div class="form-layout"><form id="profile-form" class="panel form-panel">
+          <div class="form-section"><span class="step-number">01</span><div><h3>About you</h3><p>Your basic academic details.</p></div></div>
+          <div class="field-grid"><label>Student name<input name="name" id="profile-name" placeholder="Your name" required></label><label>University / college<input name="university" id="profile-university" list="university-options" placeholder="Start typing your university" required><datalist id="university-options"><option value="Demo Technical University"></datalist></label><label>Degree<select name="degree" id="profile-degree"><option>B.Tech</option><option>B.E.</option><option>BCA</option><option>B.Sc</option><option>MCA</option><option>M.Tech</option><option>Other</option></select></label><label>Branch<input name="branch" id="profile-branch" value="CSE" placeholder="e.g. CSE"></label><label>Academic year<select name="year" id="profile-year"><option value="1">First year</option><option value="2" selected>Second year</option><option value="3">Third year</option><option value="4">Fourth year</option></select></label><label>Current semester<select name="semester" id="profile-semester"><option value="1">Semester 1</option><option value="2">Semester 2</option><option value="3" selected>Semester 3</option><option value="4">Semester 4</option><option value="5">Semester 5</option><option value="6">Semester 6</option><option value="7">Semester 7</option><option value="8">Semester 8</option></select></label><label>Regulation / batch year<input name="regulation" id="profile-regulation" value="2024" placeholder="e.g. 2024"></label><label>Study time per day<select name="daily_minutes" id="profile-minutes"><option value="30">30 minutes</option><option value="60" selected>1 hour</option><option value="90">1.5 hours</option><option value="120">2 hours</option><option value="180">3 hours</option></select></label></div>
+          <div class="form-actions"><span class="muted">You can update these details anytime.</span><button class="btn btn-dark" type="submit">Save & find syllabus ↗</button></div><div id="profile-message" class="form-message"></div>
+        </form><aside class="panel tip-panel"><div class="tip-icon">✧</div><h3>Why these details?</h3><p>Universities can have different syllabi for the same degree and branch. Your semester and regulation year help us select the closest matching curriculum.</p><div class="tip-divider"></div><b>Don't see your university?</b><p>You can upload a structured syllabus JSON or use the demo curriculum and edit it later.</p></aside></div>
+      </section>
+
+      <section class="page" id="page-syllabus">
+        <div class="page-title"><div class="eyebrow">YOUR CURRICULUM, ORGANIZED</div><h1>My syllabus</h1><p class="subhead">Explore your subjects, units and the topics you'll learn this semester.</p></div>
+        <div class="syllabus-banner"><div><span class="eyebrow light">CURRENT CURRICULUM</span><h2 id="syllabus-university">Demo Technical University</h2><p id="syllabus-meta">B.Tech · CSE · Semester 3</p></div><span class="syllabus-stamp">✦ VERIFIED DEMO</span></div>
+        <div class="syllabus-tools"><div><b id="syllabus-count">Your subjects</b><p class="muted">Select a subject to explore its units.</p></div><label class="upload-btn">Upload syllabus JSON<input type="file" id="syllabus-file" accept=".json,application/json" hidden></label></div>
+        <div id="syllabus-list" class="syllabus-list"><div class="empty">Your syllabus will appear here after setup.</div></div>
+        <div class="notice"><span>ⓘ</span><p><b>About syllabus matching:</b> The included catalogue is a demonstration curriculum, not an official university feed. Confirm the subjects against your university's current syllabus. You can upload your own structured JSON curriculum when a match isn't available.</p></div>
+      </section>
+
+      <section class="page" id="page-performance">
+        <div class="page-title"><div class="eyebrow">UNDERSTAND YOUR ACADEMICS</div><h1>Performance</h1><p class="subhead">A helpful estimate based on your academic records — not a fixed judgement.</p></div>
+        <div class="notice"><span>ⓘ</span><p>Enter percentages for each subject. The estimate uses marks (35%), internal assessments (25%), assignments (20%) and attendance (20%). These weights are configurable in this MVP's backend logic.</p></div>
+        <form id="records-form" class="panel records-panel"><div class="panel-head"><div><div class="eyebrow">SUBJECT-WISE INPUT</div><h3>Your academic records</h3></div><button class="btn btn-dark" type="submit">Analyze performance ↗</button></div><div id="records-inputs"></div><div class="form-actions"><span class="muted">Use values from 0 to 100.</span><button class="btn btn-dark" type="submit">Save & analyze ↗</button></div></form>
+        <div class="performance-results" id="performance-results"><div class="empty panel">Save your academic records to see your performance analysis.</div></div>
+      </section>
+
+      <section class="page" id="page-planner">
+        <div class="page-title"><div class="eyebrow">A PLAN THAT MOVES WITH YOU</div><h1>Study planner</h1><p class="subhead">A manageable path through the topics that need your attention.</p></div>
+        <div class="planner-intro"><div><span class="eyebrow light">YOUR NEXT CHAPTER</span><h2>Make room for progress.</h2><p>We'll prioritize weaker subjects and topics you haven't mastered yet.</p></div><button class="btn btn-light" id="generate-plan">✦ Generate my plan</button></div>
+        <div class="plan-summary" id="plan-summary"></div><div id="task-list" class="task-list"><div class="empty panel">Generate your personalized study plan to see your tasks.</div></div>
+      </section>
+
+      <section class="page" id="page-tutor">
+        <div class="page-title"><div class="eyebrow">LEARN AT YOUR OWN PACE</div><h1>Your AI tutor <span class="tiny-new">BETA</span></h1><p class="subhead">Ask questions, explore concepts and practice what you're learning.</p></div>
+        <div class="tutor-layout"><aside class="panel tutor-context"><div class="eyebrow">LEARNING CONTEXT</div><h3>Choose what to learn</h3><label>Subject<select id="tutor-subject"></select></label><label>Unit<select id="tutor-unit"></select></label><div class="tutor-hint"><span>✦</span><p>Your tutor uses your selected syllabus unit and can adapt explanations to your learning level.</p></div><div class="mode-list"><button data-prompt="Explain this topic simply, as if I am learning it for the first time.">✧ Teach me simply</button><button data-prompt="Give me a short quiz to test my understanding.">◇ Test my understanding</button><button data-prompt="Give me a real-world example and explain it step by step.">↗ Show me an example</button><button data-prompt="Summarize the key points I should remember for an exam.">▤ Help me revise</button></div></aside>
+          <div class="panel chat-panel"><div class="chat-head"><div class="tutor-avatar">✦</div><div><b>EduPilot learning guide</b><small id="tutor-status">Syllabus-grounded tutor · Ready</small></div><span class="online-dot"></span></div><div id="chat-messages" class="chat-messages"><div class="chat-bubble tutor"><b>Hi! I'm your learning guide.</b><p>Choose a subject and unit, then tell me what you'd like help with. We can take it one concept at a time.</p></div></div><form id="chat-form" class="chat-compose"><input id="chat-input" placeholder="Ask me to explain a concept..." autocomplete="off"><button class="send-btn" type="submit">↑</button></form></div></div>
+        <div class="notice"><span>ⓘ</span><p>Without an API key, the tutor uses prepared explanations and questions from the selected syllabus. Configure an OpenAI-compatible API key on the server to enable generated conversational teaching. Never put the key in browser code.</p></div>
+      </section>
+
+      <section class="page" id="page-progress">
+        <div class="page-title"><div class="eyebrow">NOTICE THE DIFFERENCE</div><h1>My progress</h1><p class="subhead">Your learning journey, measured topic by topic.</p></div>
+        <div class="progress-hero"><div><span class="eyebrow light">YOUR LEARNING MOMENTUM</span><h2 id="progress-headline">Every topic is a fresh start.</h2><p id="progress-copy">Complete a lesson assessment to build your learning profile.</p></div><div class="progress-circle" id="progress-circle"><strong id="progress-number">0%</strong><small>topic mastery</small></div></div>
+        <div id="mastery-grid" class="mastery-grid"><div class="empty panel">Your topic mastery will appear here after assessments.</div></div>
+      </section>
+    </div>
+    <footer class="footer"><span>✦ EduPilot AI</span><span>Learning is a journey, not a race.</span><span>Local MVP · v1.0</span></footer>
+  </main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="/script.js"></script>
+</body></html>

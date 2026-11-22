@@ -1,0 +1,185 @@
+{
+  "universities": [
+    {
+      "name": "Demo Technical University",
+      "aliases": [
+        "demo university",
+        "sample technical university"
+      ],
+      "regulations": [
+        "2024"
+      ],
+      "degrees": [
+        "B.Tech"
+      ],
+      "branches": [
+        {
+          "name": "Computer Science and Engineering",
+          "code": "CSE",
+          "years": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "semesters": {
+            "3": [
+              {
+                "code": "DSA",
+                "name": "Data Structures and Algorithms",
+                "units": [
+                  {
+                    "title": "Algorithm Analysis",
+                    "topics": [
+                      "Time and space complexity",
+                      "Asymptotic notation",
+                      "Recurrence relations"
+                    ],
+                    "lesson": "Algorithm analysis estimates how an algorithm's resource use grows with input size. Big-O describes an upper growth bound, while Omega describes a lower bound and Theta describes a tight bound. Compare algorithms by counting dominant operations rather than relying only on machine run time.",
+                    "questions": [
+                      "What does Big-O notation describe?",
+                      "Compare O(n) and O(n\u00b2) growth.",
+                      "Why do we ignore constant factors in asymptotic analysis?"
+                    ]
+                  },
+                  {
+                    "title": "Linear Data Structures",
+                    "topics": [
+                      "Arrays",
+                      "Linked lists",
+                      "Stacks",
+                      "Queues"
+                    ],
+                    "lesson": "Linear data structures arrange elements in a sequence. Arrays provide indexed access, linked lists connect nodes through references, stacks follow last-in-first-out order, and queues follow first-in-first-out order.",
+                    "questions": [
+                      "Explain the LIFO principle.",
+                      "When might a linked list be preferred over an array?",
+                      "Give one real-world queue example."
+                    ]
+                  },
+                  {
+                    "title": "Trees and Graphs",
+                    "topics": [
+                      "Binary trees",
+                      "Tree traversals",
+                      "Binary search trees",
+                      "Graph representations"
+                    ],
+                    "lesson": "Trees represent hierarchical relationships. A binary tree has at most two children per node. Common traversals include preorder, inorder and postorder. Graphs model general relationships using vertices and edges.",
+                    "questions": [
+                      "What is the difference between a tree and a graph?",
+                      "Name three depth-first tree traversals.",
+                      "What is an adjacency list?"
+                    ]
+                  }
+                ]
+              },
+              {
+                "code": "DBMS",
+                "name": "Database Management Systems",
+                "units": [
+                  {
+                    "title": "Database Fundamentals",
+                    "topics": [
+                      "Database concepts",
+                      "DBMS architecture",
+                      "Data independence"
+                    ],
+                    "lesson": "A database is an organized collection of related data. A DBMS provides controlled ways to define, store, query and protect that data. Data independence separates applications from details of physical storage or logical schema changes.",
+                    "questions": [
+                      "What is a DBMS?",
+                      "Differentiate logical and physical data independence.",
+                      "State two advantages of a DBMS."
+                    ]
+                  },
+                  {
+                    "title": "Relational Model and SQL",
+                    "topics": [
+                      "Relations and tuples",
+                      "Keys",
+                      "SQL DDL and DML",
+                      "Joins"
+                    ],
+                    "lesson": "The relational model stores data in relations (tables). Rows are tuples and columns are attributes. Keys identify rows and connect tables. SQL defines schemas, inserts and updates data, and retrieves information using queries and joins.",
+                    "questions": [
+                      "What is a primary key?",
+                      "Differentiate DDL and DML.",
+                      "Why are joins used?"
+                    ]
+                  },
+                  {
+                    "title": "Normalization and Transactions",
+                    "topics": [
+                      "Functional dependencies",
+                      "1NF, 2NF and 3NF",
+                      "ACID properties",
+                      "Concurrency control"
+                    ],
+                    "lesson": "Normalization organizes relations to reduce unwanted redundancy and update anomalies. Transactions are logical units of work. ACID means atomicity, consistency, isolation and durability.",
+                    "questions": [
+                      "What is a functional dependency?",
+                      "What problem does normalization address?",
+                      "Explain the ACID properties."
+                    ]
+                  }
+                ]
+              },
+              {
+                "code": "OS",
+                "name": "Operating Systems",
+                "units": [
+                  {
+                    "title": "OS Fundamentals and Processes",
+                    "topics": [
+                      "OS functions",
+                      "Process states",
+                      "Process control block",
+                      "Threads"
+                    ],
+                    "lesson": "An operating system manages hardware resources and provides services to programs. A process is a program in execution. Its state may be new, ready, running, waiting or terminated. A process control block stores information needed to manage it.",
+                    "questions": [
+                      "List four major functions of an operating system.",
+                      "What is a process control block?",
+                      "Differentiate a process and a thread."
+                    ]
+                  },
+                  {
+                    "title": "CPU Scheduling and Synchronization",
+                    "topics": [
+                      "FCFS",
+                      "SJF",
+                      "Round Robin",
+                      "Critical sections",
+                      "Semaphores"
+                    ],
+                    "lesson": "CPU scheduling selects a ready process for execution. FCFS uses arrival order, SJF selects the shortest estimated job, and Round Robin gives each process a time quantum. Synchronization coordinates shared-resource access to avoid race conditions.",
+                    "questions": [
+                      "How does Round Robin scheduling work?",
+                      "What is a critical section?",
+                      "Why are semaphores used?"
+                    ]
+                  },
+                  {
+                    "title": "Deadlocks and Memory Management",
+                    "topics": [
+                      "Deadlock conditions",
+                      "Deadlock handling",
+                      "Paging",
+                      "Virtual memory"
+                    ],
+                    "lesson": "A deadlock is a situation where processes wait indefinitely for resources held by one another. The four necessary conditions are mutual exclusion, hold and wait, no preemption and circular wait. Paging divides memory into fixed-size pages and frames; virtual memory lets processes use an address space larger than physical RAM.",
+                    "questions": [
+                      "Name the four necessary deadlock conditions.",
+                      "What is paging?",
+                      "What is the purpose of virtual memory?"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
