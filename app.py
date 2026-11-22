@@ -11,7 +11,7 @@ from datetime import date, datetime, timedelta
 BASE = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE, "edupilot.db")
 CATALOG_PATH = os.path.join(BASE, "data", "syllabus_catalog.json")
-HOST, PORT = "127.0.0.1", int(os.environ.get("PORT", "8000"))
+HOST, PORT = "0.0.0.0", int(os.environ.get("PORT", "8000"))
 
 DEFAULT_CATALOG = {
   "universities": [{
